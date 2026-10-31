@@ -1,0 +1,229 @@
+/* 1. Universal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  line-height: 1.5;
+  color: #0F172A;
+  background-color: #F1F5F9;
+}
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+/* 2. Header and Footer (Flexbox) */
+.site-header,
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background-color: #0F172A;
+  color: white;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-links,
+.footer-links {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-links a,
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.site-footer p {
+  margin-bottom: 0;
+}
+
+/* 3. Mobile-First Grids (1 column) */
+.hero-grid,
+.cards-gallery,
+.content-grid,
+.media-pair {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.hero-grid {
+  margin-bottom: 32px;
+}
+
+.section-title {
+  margin-bottom: 16px;
+}
+
+/* 4. Page 1: Hero */
+.hero-banner,
+.hero-sidebar {
+  padding: 24px;
+  background-color: white;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+}
+
+.hero-sidebar ul {
+  list-style: none;
+}
+
+.hero-sidebar a {
+  color: #0284C7;
+}
+
+.btn-primary,
+.btn-card {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #0284C7;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  margin-top: 16px;
+}
+
+/* 5. Page 1: Cards (Flexbox column) */
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+}
+
+.card-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+  margin-bottom: 16px;
+  background-color: #E2E8F0;
+  color: #475569;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.card .btn-card {
+  margin-top: auto;
+}
+
+/* 6. Page 2: Detail */
+.detail-hero {
+  margin-bottom: 24px;
+}
+
+.lead-text {
+  color: #475569;
+}
+
+.article-body,
+.metadata {
+  padding: 24px;
+  background-color: white;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+}
+
+.article-body ul {
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.media-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  margin-bottom: 24px;
+  background-color: #E2E8F0;
+  color: #475569;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.media-pair .media-placeholder {
+  height: 140px;
+  margin-bottom: 0;
+}
+
+.media-pair {
+  margin-bottom: 24px;
+}
+
+.metadata {
+  align-self: start;
+}
+
+.metadata p {
+  color: #475569;
+}
+
+/* 7. Desktop (768px and up) */
+@media (min-width: 768px) {
+  main {
+    padding: 40px 80px;
+  }
+
+  .site-header,
+  .site-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 80px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .cards-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .content-grid {
+    grid-template-columns: 3fr 1fr;
+  }
+
+  .media-pair {
+    grid-template-columns: 1fr 1fr;
+  }
+}
